@@ -1,23 +1,27 @@
-# Compile Installation
+# Install by Compiling
 
-![Tested OS](https://img.shields.io/badge/RockyLinux\_9.1-Tested-green?style=flat\&logo=RockyLinux) ![Tested SW Ver.](https://img.shields.io/badge/Tested\_SW\_Ver.-PHP\_8.1.2-blue?style=flat)
+![Tested Platform](https://img.shields.io/badge/RockyLinux\_9.1-Tested-green?style=flat\&logo=RockyLinux) ![Tested SW Ver.](https://img.shields.io/badge/Tested\_SW\_Ver.-PHP\_8.1.2-blue?style=flat)
 
-**\*** **Compiling Needs Memory Space!**\
-If the memory space of your device is **Lower than 2GB**, You had better Create a Swap.
+{% hint style="warning" %}
+**Compiling Needs Memory Space!**
 
-1.  **Prepare**
+If the memory space of your device is **Lower than 2GB**, you had better Create a Swap.
+{% endhint %}
+
+### **Prepare**
+
+1.  Prepare for the Environment
 
     ```bash
     dnf groupinstall "Development Tools"
-
     dnf install libxml2-devel libicu-devel sqlite-devel libxslt-devel libpng-devel libjpeg-devel freetype-devel libzip-devel git systemd-devel curl-devel
     ```
 
-    Install Oniguruma
 
-    ```bash
-    git clone https://github.com/kkos/oniguruma.git
-    cd oniguruma
+2.  Install Oniguruma
+
+    <pre class="language-bash"><code class="lang-bash"><strong>git clone https://github.com/kkos/oniguruma.git
+    </strong>cd oniguruma
     ./autogen.sh
     ./configure --bindir=/usr/sbin/ \
             --sbindir=/usr/sbin/ \
@@ -31,24 +35,25 @@ If the memory space of your device is **Lower than 2GB**, You had better Create 
             --localedir=/usr/share/locale \
             --mandir=/usr/share/man/ \
             --docdir=/usr/share/doc/onig
-    make && make install
-    ```
+    make &#x26;&#x26; make install
+    </code></pre>
 
-    Add user for FPM
+
+3.  Add user for FPM
 
     ```bash
     adduser www
     ```
-2.  **Download the Source** [![Downloads](https://img.shields.io/badge/Downloads-blue)](https://www.php.net/downloads) [![OSS-DL](https://img.shields.io/badge/Download\_from\_SRC--OSS-darkblue)](https://src-oss.expcs.net/php-8.2.5.tar.gz)
 
-    Copy the link you need and download and then unzip.
 
-    ```bash
+4.  Download the Source [![Downloads](https://img.shields.io/badge/Downloads-blue)](https://www.php.net/downloads) [![OSS-DL](https://img.shields.io/badge/Download\_from\_SRC--OSS-darkblue)](https://src-oss.expcs.net/php-8.2.5.tar.gz)
+
     wget https://www.php.net/distributions/php-8.1.2.tar.gz
+5. Copy the link you need and download and then unzip.
 
-    tar -xzf php-8.1.2.tar.gz
-    ```
-3.  **Pre-Compile**
+&#x20;tar -xzf php-8.1.2.tar.gz
+
+1.  **Pre-Compile**
 
     _See all options in_ [![Option](https://img.shields.io/badge/Offical\_Docs-blue)](https://www.php.net/manual/en/configure.about.php#configure.options.misc)
 
@@ -66,12 +71,12 @@ If the memory space of your device is **Lower than 2GB**, You had better Create 
     ```bash
     --enable-mysqlnd --with-pdo-mysql=mysqlnd --with-mysqli --with-mysql-sock=/var/lib/mysql/mysql.sock
     ```
-4.  **Compile & Install**
+2.  **Compile & Install**
 
     ```bash
     make && make install
     ```
-5.  **Finish Config**
+3.  **Finish Config**
 
     Copy Config File to the Install Directory
 
@@ -123,4 +128,4 @@ If the memory space of your device is **Lower than 2GB**, You had better Create 
     ```bash
     systemctl daemon-reload
     ```
-6. **Enjoy it!**
+4. **Enjoy it!**

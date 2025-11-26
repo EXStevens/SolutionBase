@@ -41,21 +41,15 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
+
         blog: {
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -75,9 +69,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Solution Base',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Solution Base Logo',
         src: 'img/favicon.ico',
       },
       items: [
@@ -89,8 +83,8 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://github.com/EXStevens/SolutionBase',
+          label: 'Contribute',
           position: 'right',
         },
       ],
@@ -109,7 +103,7 @@ const config: Config = {
         },
 
         {
-          title: 'More',
+          title: 'About',
           items: [
             {
               label: 'Blog: csts.dev',

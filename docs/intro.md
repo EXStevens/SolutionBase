@@ -2,6 +2,7 @@
 id: intro
 title: Welcome to Solution Base
 sidebar_position: 1
+slug: /
 ---
 
 # Welcome to Solution Base

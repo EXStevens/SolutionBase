@@ -1,7 +1,3 @@
----
-description: This is the start page.
----
-
 # Overview
 ## Welcome to Solution Base - Software Installation
 A centralized and organized place where people can easily browse, search, and discover available solutions about software installation.

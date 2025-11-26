@@ -12,14 +12,14 @@
 2.  Create a partition
 
     ```bash
-    dd if=/dev/zero of=$SWAPFILE_DIRECTORY bs=$COUNT count=$SPACE
+    dd if=/dev/zero of=SWAPFILE_DIRECTORY bs=COUNT count=SPACE
     ```
 
-{% hint style="info" %}
-`$COUNT` could be `1K` \ `1M` \ `1G` etc.
+:::tip
+`COUNT` could be `1K` \ `1M` \ `1G` etc.
 
-`$SPACE` depends on your need, e.g. `1024`
-{% endhint %}
+`SPACE` depends on your need, e.g. `1024`
+:::
 
 3.  Formation
 
@@ -48,4 +48,3 @@
        $SWAPFILE_DIRECTORY swap swap defaults 0 0
        ```
 
-       \

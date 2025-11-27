@@ -121,8 +121,13 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Charlie. Built with Docusaurus. [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-`,
+      copyright: `Copyright © ${new Date().getFullYear()} Charlie. Built with Docusaurus.
+      <a href="https://creativecommons.org/licenses/by-nc/4.0/">
+          <img
+            src="https://img.shields.io/badge/License-CC_BY--NC_4.0-blue.svg"
+            alt="License: CC BY-NC 4.0"
+          />
+        </a>`,
     },
     prism: {
       theme: prismThemes.github,

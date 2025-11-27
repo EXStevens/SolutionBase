@@ -1,15 +1,13 @@
 ---
 id: intro
-title: Welcome to Solution Base
+title: Welcome
 sidebar_position: 1
 slug: /
 ---
 
 # Welcome to Solution Base
 
-Solution Base houses the experiences of my CS exploration and study notes, all written in a commonly-understandable style. Use the sidebar to explore topics or jump to specific guides. Hope you'll like it.
-
----
+Solution Base houses the experiences of my CS exploration and study notes, all written in a commonly-understandable style. Most of them are tested on Rocky Linux 9, the platform I am using. Use the sidebar to explore topics or jump to specific guides. Hope you'll like it.
 
 ## What’s inside this site?
 
@@ -24,8 +22,6 @@ Solution Base houses the experiences of my CS exploration and study notes, all w
 
 - **“What’s Up?” updates**  
   A lightweight space for small announcements, personal notes, reflections, or anything I feel like writing at the moment.
-
----
 
 ## Quick links
 

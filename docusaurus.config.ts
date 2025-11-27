@@ -45,6 +45,7 @@ const config: Config = {
         },
 
         blog: {
+          routeBasePath: '/updates',
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -81,7 +82,7 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/updates', label: 'What\'s Up?', position: 'left'},
         {
           href: 'https://github.com/EXStevens/SolutionBase',
           label: 'Contribute',
@@ -93,12 +94,16 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Contents',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Docs',
               to: '/',
             },
+            {
+              label: 'What\'s up',
+              to: '/updates',
+            }
           ],
         },
 
@@ -116,11 +121,30 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Charlie. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Charlie. Built with Docusaurus. [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+
+      additionalLanguages: [
+        'php',
+        'nginx',
+        'ini',
+        'powershell',
+        'diff',
+        'json',
+        'yaml',
+        'toml',
+        'docker',
+        'bash',
+        'sql',
+        'c',
+        'cpp',
+        'java',
+        'python'
+      ],
     },
   } satisfies Preset.ThemeConfig,
 };

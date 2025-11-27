@@ -1,15 +1,22 @@
+---
+id: Swap-Partition
+title: Swap Partition
+---
+
 # Create/Edit Swap Partition
 
 ![Tested Platform](https://img.shields.io/badge/RockyLinux\_9.1-Tested-green?style=flat\&logo=RockyLinux)
 
-### Set-up Steps
+---
 
-1.  Check the free space
+## Set-up Steps
+
+### 1.  Check the free space
 
     ```bash
     free -m
     ```
-2.  Create a partition
+### 2.  Create a partition
 
     ```bash
     dd if=/dev/zero of=SWAPFILE_DIRECTORY bs=COUNT count=SPACE
@@ -21,7 +28,7 @@
 `SPACE` depends on your need, e.g. `1024`
 :::
 
-3.  Formation
+### 3.  Formation
 
     ```bash
     mkswap $SWAPFILE_DIRECTORY
@@ -29,14 +36,14 @@
     ```
 
 
-4.  Turn it on
+### 4.  Turn it on
 
     ```bash
     swapon $SWAPFILE_DIRECTORY
     ```
 
 
-5. Enable it permanently
+### 5. Enable it permanently
    1.  Open /etc/fstab in the editor.
 
        ```bash

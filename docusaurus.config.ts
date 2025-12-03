@@ -148,7 +148,8 @@ const config: Config = {
         'c',
         'cpp',
         'java',
-        'python'
+        'python',
+        'csharp'
       ],
     },
   } satisfies Preset.ThemeConfig,

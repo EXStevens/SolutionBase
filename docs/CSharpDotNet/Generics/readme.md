@@ -1,5 +1,6 @@
 ---
 id: Generics
+title: Generics
 ---
 
 # Generics in C#

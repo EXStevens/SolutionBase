@@ -44,7 +44,7 @@ Generic constraints specify the requirements that a type parameter must satisfy.
 
 Without constraints, the compiler cannot assume anything about `T`.
 
-## Basic Syntax
+### Basic Syntax
 
 ```CSharp
 class MyClass<T> where T : ConstraintType
@@ -67,41 +67,41 @@ Constraint order must follow this pattern:
 3. Interfaces  
 4. new()
 
-## Common Constraint Types
+### Common Constraint Types
 
-### Reference type constraint
+#### Reference type constraint
 
 ```CSharp
 where T : class
 ```
 
-### Value type constraint
+#### Value type constraint
 
 ```CSharp
 where T : struct
 ```
 
-### Parameterless constructor
+#### Parameterless constructor
 
 ```CSharp
 where T : new()
 ```
 
-### Inherit from a base class
+#### Inherit from a base class
 
 ```CSharp
 where T : BaseClass
 ```
 
-### Implement an interface
+#### Implement an interface
 
 ```CSharp
 where T : IDisposable
 ```
 
-## Why Constraints Are Needed
+### Why Constraints Are Needed
 
-### Calling members that may not exist
+#### Calling members that may not exist
 
 ```CSharp
 void CloseItem<T>(T item)
@@ -117,7 +117,7 @@ void CloseItem<T>(T item) where T : IDisposable
 }
 ```
 
-### Creating instances of T
+#### Creating instances of T
 
 ```CSharp
 class Factory<T>
@@ -133,7 +133,7 @@ class Factory<T> where T : new()
 }
 ```
 
-## Method-Level Constraints
+### Method-Level Constraints
 
 Constraints can also be applied to individual methods:
 
@@ -143,9 +143,3 @@ public void Save<T>(T item) where T : IEntity
     item.Store();
 }
 ```
-
-## Summary
-
-- Constraints define what a type parameter must support.  
-- They ensure type safety for operations involving `T`.  
-- Common constraints include: class, struct, new(), base classes, and interfaces.
